@@ -11,9 +11,11 @@ openai.api_key = os.environ["OPENAI_API_KEY"]
 openai.api_base = os.environ["OPENAI_API_BASE"]
 openai.api_type = "azure"
 openai.api_version = os.environ['OPENAI_API_VERSION']
+openai_model = os.environ['OPENAI_MODEL']
+
 
 if "openai_model" not in st.session_state:
-    st.session_state["openai_model"] = "gpt-35-turbo"
+    st.session_state["openai_model"] = openai_model
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
