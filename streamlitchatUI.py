@@ -27,8 +27,6 @@ if prompt := st.chat_input("How can I help?"):
     with st.chat_message("user"):
         st.markdown(prompt)
 
-    
-
     with st.chat_message("assistant"):
         message_placeholder = st.empty()
         full_response = ""
