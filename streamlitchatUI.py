@@ -11,11 +11,11 @@ openai.api_key = os.environ["OPENAI_API_KEY"]
 openai.api_base = os.environ["OPENAI_API_BASE"]
 openai.api_type = "azure"
 openai.api_version = os.environ['OPENAI_API_VERSION']
-openai_model = os.environ['OPENAI_MODEL']
+openai_chat_model = os.environ['OPENAI_CHAT_MODEL']
 
 
 if "openai_model" not in st.session_state:
-    st.session_state["openai_model"] = openai_model
+    st.session_state["openai_model"] = openai_chat_model
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
